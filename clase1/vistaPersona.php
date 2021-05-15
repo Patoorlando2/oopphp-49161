@@ -1,6 +1,7 @@
 <?php
     require 'Persona.php';
-    
+    //instanciar
+    $Persona = new Persona;
 ?>
 <!doctype html>
 <html lang="en">
@@ -12,7 +13,13 @@
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    
+    <h1>Vista Persona</h1>
+
+    <?php
+        echo '<pre>';
+        print_r($Persona);
+        echo '</pre>';
+    ?>
 
 </body>
 </html>
