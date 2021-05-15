@@ -2,6 +2,8 @@
     require 'Persona.php';
     //instanciar
     $Persona = new Persona;
+    $Persona->setNombre('Ronnie');
+    $Persona->setApellido('Woods');
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,5 +23,8 @@
         echo '</pre>';
     ?>
 
+    <div class="objeto">
+        <?= $Persona->verDatos() ?>
+    </div>
 </body>
 </html>
