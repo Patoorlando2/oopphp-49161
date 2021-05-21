@@ -9,7 +9,10 @@
         ## métodos
         public function verDatos()
         {
-            return 'funciona';
+            $mensaje = 'Nombre: '.$this->nombre;
+            $mensaje .= '<br>';
+            $mensaje .= 'Apellido: '.$this->apellido;
+            return $mensaje;
         }
 
         /**
