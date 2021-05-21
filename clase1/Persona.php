@@ -11,6 +11,7 @@
         {
             $this->setNombre($nombre);
             $this->setApellido($apellido);
+            //$this->otroMetodo();
         }
 
         public function verDatos()
