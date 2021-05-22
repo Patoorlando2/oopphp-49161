@@ -1,7 +1,4 @@
 
-    PDO     conexion
+    PDO             conexion
     
-        $link = new PDO(
-                    dsn  mysql;localhost,
-                    user
-            )
+    PDOStatement    capa de datos
