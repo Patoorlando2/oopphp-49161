@@ -15,6 +15,20 @@
             return $regiones;
         }
 
+        public function verRegionPorID()
+        {
+        }
+
+        public function agregarRegion()
+        {
+        }
+        public function modifiarRegion()
+        {
+        }
+        public function eliminarRegion()
+        {
+        }
+
         /**
          * @return mixed
          */
