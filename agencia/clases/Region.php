@@ -19,8 +19,35 @@
         {
         }
 
+        /*
+        private function validarForm()
+        {
+            if( isset($_POST['regID']) && filter_var($_POST['regID'], FILTER_VALIDATE_INT) ){
+                return false;
+            }
+            if( isset($_POST['regNombre']) ){
+                return false;
+            }
+            return true;
+        }
+        */
+
         public function agregarRegion()
         {
+            //return $this->validarForm();
+            $regNombre = $_POST['regNombre'];
+            $link = Conexion::conectar();
+            $sql = "INSERT INTO regiones
+                        VALUES ( DEFAULT, :regNombre )";
+            $stmt = $link->prepare($sql);
+            $stmt->bindParam(':regNombre', $regNombre, PDO::PARAM_STR );
+            if( $stmt->execute() ){
+                //registramos atributos en el objeto
+                $this->setRegID( $link->lastInsertID() );
+                $this->setRegNombre( $regNombre );
+                return true;
+            }
+            return false;
         }
         public function modifiarRegion()
         {
