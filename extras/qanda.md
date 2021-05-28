@@ -1,8 +1,6 @@
-<img src="imagenes/pdo.jpg">
 
-| PDO          | Conexion con el server |
-|--------------|------------------------|
-| PDOStatement | Capa de datos          | 
+    <?php
+        echo 'hola';
+    ?>
 
-
-<img src="imagenes/pdo2.jpg">
+    <?= 'hola' ?>
