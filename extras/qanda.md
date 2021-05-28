@@ -1,10 +1,8 @@
+<img src="imagenes/pdo.jpg">
 
-    PDO             conexion
-    
-    PDOStatement    capa de datos
+| PDO          | Conexion con el server |
+|--------------|------------------------|
+| PDOStatement | Capa de datos          | 
 
 
-
-    inyección de SQL
-
-        
+<img src="imagenes/pdo2.jpg">
