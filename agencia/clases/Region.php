@@ -57,7 +57,7 @@
                 //registramos atributos en el objeto
                 $this->setRegID( $link->lastInsertID() );
                 $this->setRegNombre( $regNombre );
-                return true;
+                return $this;
             }
             return false;
         }
