@@ -17,12 +17,24 @@
 
         public function verRegionPorID()
         {
+            $regID = $_GET['regID'];
+            $link = Conexion::conectar();
+            $sql = "SELECT regID, regNombre 
+                        FROM regiones
+                        WHERE regID = :regID";
+            $stmt = $link->prepare($sql);
+            $stmt->bindParam(':regID', $regID, PDO::PARAM_INT);
+            $stmt->execute();
+            $datos = $stmt->fetch();
+            $this->setRegID($datos['regID']);
+            $this->setRegNombre($datos['regNombre']);
+            return $this;
         }
 
         /*
         private function validarForm()
         {
-            if( isset($_POST['regID']) && filter_var($_POST['regID'], FILTER_VALIDATE_INT) ){
+            if( ( isset( $_GET['regID']) || isset($_POST['regID']) ) && filter_var($_POST['regID'], FILTER_VALIDATE_INT) ){
                 return false;
             }
             if( isset($_POST['regNombre']) ){
