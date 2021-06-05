@@ -1,9 +1,7 @@
 
-    función de autocarga
-        
-        spl_autoload_register()
+    REST  RESTFul
 
 
-    instanciación 
-        o
-    llamado a método estático
+    HTML        get|post
+
+    REST  get|head|post|pot|patch|delete
