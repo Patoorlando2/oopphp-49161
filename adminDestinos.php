@@ -1,25 +1,28 @@
 <?php
     //require 'config/config.php';
     require 'clases/Conexion.php';
-    require 'clases/Region.php';
+    require 'clases/Destino.php';
 
-    $Region = new Region;
-    $regiones = $Region->listarRegiones();
-
+    $Destino = new Destino;
+    $destinos = $Destino->listarDestinos();
 
     include 'includes/over-all-header.html';
     include 'includes/nav.php';
 ?>
 
     <main class="container">
-
-        <h1>Panel de administracion de regiones</h1>
+        <h1>Panel de administracion de destinos</h1>
 
         <table class="table table-borderless table-striped table-hover">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Region</th>
+                    <th>Nombre de destino</th>
+                    <th>Región</th>
+                    <th>Precio</th>
+                    <th>Total asientos</th>
+                    <th>Asientos disponibles</th>
+
                     <th colspan="2">
                         <a href="" class="btn btn-outline-secondary">
                             Agregar
@@ -29,11 +32,15 @@
             </thead>
             <tbody>
                 <?php
-                foreach ( $regiones as $region ) {
+                foreach ( $destinos as $destino ) {
                 ?>
                 <tr>
-                    <td><?= $region['regID']?></td>
-                    <td><?= $region['regNombre']?></td>
+                    <td><?= $destino['destID']?></td>
+                    <td><?= $destino['destNombre']?></td>
+                    <td><?= $destino['regID'] ?></td>
+                    <td><?= $destino['destPrecio'] ?></td>
+                    <td><?= $destino['destAsientos'] ?></td>
+                    <td><?= $destino['destDisponibles'] ?></td>
                     <td>
                         <a href="" class="btn btn-outline-secondary">
                             Modificar
@@ -49,13 +56,11 @@
                     }
                 ?>
             </tbody>
-
         </table>
     </main>
 <br>
 <br>
 <br>
-
 <?php
     include 'includes/footer.php';
 ?>

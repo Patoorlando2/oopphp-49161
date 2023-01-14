@@ -14,6 +14,26 @@
             $regiones = $stmt->fetchAll();
             return $regiones;
         }
+
+        public function verRegionPorID()
+        {
+
+        }
+
+        public function agregarRegion()
+        {
+
+        }
+
+        public function modificarRegion()
+        {
+
+        }
+
+        public function eliminarRegion()
+        {
+            
+        }
     }
 
 ?>
