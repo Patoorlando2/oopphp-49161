@@ -13,7 +13,7 @@
             <a href="formLogin.php"><i class="fas fa-sign-in-alt mr-2"></i> Ingresar</a>
         </button>
 
-<!-- logueado
+<!-- logueado-->
         <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <a href="#"><i class="fas fa-sign-out-alt"></i>
                 Nombre Apellido
@@ -24,7 +24,6 @@
                 <a class="dropdown-item bg-dark" href="">Modificar Perfil</a>
                 <a class="dropdown-item bg-dark" href="">Cambiar contraseña</a>
             </div>
--->
-
+<!-- -->
     </div>
 </nav>

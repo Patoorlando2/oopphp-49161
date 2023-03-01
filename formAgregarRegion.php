@@ -1,6 +1,7 @@
 <?php
 
     //require 'config/config.php';
+
     include 'includes/over-all-header.html';
     include 'includes/nav.php';
 ?>
@@ -13,8 +14,8 @@
                 <form action="agregarRegion.php" method="post">
 
                     <div class="form-group">
-                    <label for="regNombre">Nombre de la región:</label>
-                    <input type="text" name="regNombre" 
+                        <label for="regNombre">Nombre de la región:</label>
+                        <input type="text" name="regNombre" 
                            id="regNombre" class="form-control">
                     </div>
 
@@ -23,7 +24,6 @@
                         Volver a panel de regiones
                     </a>
                 </form>
-
             </div>
 
 

@@ -24,7 +24,7 @@
                     <th>Asientos disponibles</th>
 
                     <th colspan="2">
-                        <a href="" class="btn btn-outline-secondary">
+                        <a href="formAgregarDestino.php" class="btn btn-outline-secondary">
                             Agregar
                         </a>
                     </th>
@@ -42,12 +42,12 @@
                     <td><?= $destino['destAsientos'] ?></td>
                     <td><?= $destino['destDisponibles'] ?></td>
                     <td>
-                        <a href="" class="btn btn-outline-secondary">
+                        <a href="formModificarDestino.php?destID=<?=$destino['destID'] ?>" class="btn btn-outline-secondary">
                             Modificar
                         </a>
                     </td>
                     <td>
-                        <a href="" class="btn btn-outline-secondary">
+                        <a href="formEliminarDestino.php?<?=$destino['destID'] ?>" class="btn btn-outline-secondary">
                             Eliminar
                         </a>
                     </td>
