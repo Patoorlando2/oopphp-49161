@@ -1,7 +1,7 @@
 <?php
-    //require 'config/config.php';
-    require 'clases/Conexion.php';
-    require 'clases/Destino.php';
+    require 'config/config.php';
+    //require 'clases/Conexion.php';
+    //require 'clases/Destino.php';
 
     $Destino = new Destino;
     $destinos = $Destino->listarDestinos();
@@ -47,7 +47,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="formEliminarDestino.php?<?=$destino['destID'] ?>" class="btn btn-outline-secondary">
+                        <a href="formEliminarDestino.php?destID=<?=$destino['destID'] ?>" class="btn btn-outline-secondary">
                             Eliminar
                         </a>
                     </td>

@@ -1,9 +1,10 @@
 <?php
 
+    require 'config/config.php';
     //require 'config/config.php';
-    require 'clases/Conexion.php';
-    require 'clases/Region.php';
-    require 'clases/Destino.php';
+    //require 'clases/Conexion.php';
+    //require 'clases/Region.php';
+    //require 'clases/Destino.php';
     
     $Region = new Region;
     $regiones = $Region->listarRegiones();

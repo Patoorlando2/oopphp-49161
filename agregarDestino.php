@@ -1,8 +1,8 @@
 <?php
-    //require 'config/config.php';
-    // inyección de dependencias
-    require 'clases/Conexion.php';
-    require 'clases/Destino.php';
+    require 'config/config.php';
+    //inyección de dependencias
+    //require 'clases/Conexion.php';
+    //require 'clases/Destino.php';
     $Destino = new Destino;
     $check = $Destino->agregarDestino($_POST['destNombre']);
     

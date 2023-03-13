@@ -106,7 +106,8 @@
         }
         public function eliminarDestino()
         {
-        
+			$link = Conexion::conectar();
+			$sql = "DELETE ";
         }
 
         // create Setter & Getter's atribute
