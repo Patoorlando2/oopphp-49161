@@ -3,8 +3,8 @@
     
 
     $Destino = new Destino;
-    $Region = new Region;
     $Destino->verDestinoPorID();
+    
 
 
     include 'includes/over-all-header.html';
@@ -17,9 +17,8 @@
 
         <div class="alert bg-light border border-white shadow round col-8 mx-auto p-4">
             <form action="eliminarDestino.php" method="post">
-                <span>Se eliminará el destino <?= $Destino->getDestNombre();?></span>
-                Región: <?= $Region->getRegNombre();?> <br>
-                Precio: $<?= $Destino->getDestPrecio(); ?> <br>
+                <span>Se eliminará el destino <?= $Destino->getDestNombre();?></span><br>
+                Precio: $<?=$Destino->getDestPrecio(); ?> <br>
 
                 <button class="btn btn-danger"> Confirmar Baja</button>
                     <a href="adminDestinos.php" class="btn btn-outline-secondary">
