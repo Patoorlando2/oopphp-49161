@@ -4,7 +4,7 @@
         private $destID;
         private $destNombre;
         private $regID;
-        static  $regNombre;
+        static  $regNombre; /*static se pone self*/
         private $destPrecio;
         private $destAsientos;
         private $destDisponibles;
@@ -34,6 +34,7 @@
         	$datos = $stmt->fetch(); //Devuelve solo 1 dato
         	$this->setDestID($datos['destID']);
         	$this->setDestNombre($datos['destNombre']);
+			self::setRegNombre($datos['regNombre']);
 			$this->setRegID($datos['regID']);
 			$this->setDestPrecio($datos['destPrecio']);
 			$this->setDestAsientos($datos['destAsientos']);
@@ -51,7 +52,9 @@
             $destDisponibles = $_POST['destDisponibles'];
 
             $link = Conexion::conectar();
-            $sql = "INSERT INTO destinos (destID, destNombre, regID, destPrecio, destAsientos, destDisponibles) VALUES (DEFAULT, :destNombre, :regID, :destPrecio, :destAsientos, :destDisponibles)";
+            $sql = "INSERT INTO destinos (destID, destNombre, regID, destPrecio, destAsientos, destDisponibles) 
+			VALUES 
+			(:destNombre, :regID, :destPrecio, :destAsientos, :destDisponibles)";
             // con :columna evito inyección SQL
             $stmt = $link->prepare($sql);
             //$stmt->bindParam(' :destID', $destID, PDO::PARAM_INT);
@@ -131,6 +134,18 @@
 
                 return $this;
         }
+
+		/*Getter & setter static*/
+        public static function getRegNombre()
+        {
+			return self::$regNombre;
+        }
+
+		public static function setRegNombre($regNombre)
+		{
+			self::$regNombre = $regNombre;
+		}
+		/*Getter & setter static*/
         
         /**
          * Get the value of destNombre

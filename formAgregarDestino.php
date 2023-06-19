@@ -13,7 +13,7 @@
 
             <div class="alert bg-light border border-white shadow round col-8 mx-auto p-4">
 
-                <form action="agregarDestino.php" method="post">
+                <form action="destinoAgregado.php" method="post">
 
                     <div class="form-group">
                     <label for="destNombre">Nombre del Destino:</label>
@@ -24,16 +24,15 @@
 
                     <div class="form-group">
                     <label for="regID">Región</label>
-                    <select name="regID" id="regID" 
-                            class="form-control" required>
+                    <select name="regID" id="regID" class="form-control" required>
                         <option value="">Seleccione una región</option>
-            <?php
-                foreach ( $regiones as $region ){
-            ?>                        
-                        <option value="<?= $region['regID'] ?>"><?= $region['regNombre'] ?></option>
-            <?php
-                }
-            ?>
+                    <?php
+                        foreach ( $regiones as $region ){
+                    ?>                        
+                        <option value="<?= $region['regID'] ?>"> <?= $region['regNombre'] ?> </option>
+                    <?php
+                        }
+                    ?>
                     </select>
                     </div>
 

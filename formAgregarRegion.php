@@ -1,6 +1,8 @@
 <?php
 
     //require 'config/config.php';
+    require 'clases/Conexion.php';
+    require 'clases/Region.php';
 
     include 'includes/over-all-header.html';
     include 'includes/nav.php';
@@ -11,7 +13,7 @@
 
             <div class="alert bg-light border border-white shadow round col-8 mx-auto p-4">
 
-                <form action="agregarRegion.php" method="post">
+                <form action="regionAgregado.php" method="post">
 
                     <div class="form-group">
                         <label for="regNombre">Nombre de la región:</label>
@@ -25,8 +27,6 @@
                     </a>
                 </form>
             </div>
-
-
     </main>
 <?php
     include 'includes/footer.php';

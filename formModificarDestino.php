@@ -1,7 +1,6 @@
 <?php
 
     require 'config/config.php';
-    //require 'config/config.php';
     //require 'clases/Conexion.php';
     //require 'clases/Region.php';
     //require 'clases/Destino.php';
@@ -21,7 +20,7 @@
     include 'includes/over-all-header.html';
     include 'includes/nav.php';
 ?>
-    
+
     <main class="container">
             <h1>Modificación de un Destino</h1>
 
